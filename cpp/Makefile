@@ -38,6 +38,7 @@ run-iso: cppkernel.iso
 
 clean:
 	rm -f $(OBJ) kernel.elf
+	rm -f cppkernel.iso
 	rm -rf iso/
 
 .PHONY: all clean
