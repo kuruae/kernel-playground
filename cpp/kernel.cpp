@@ -14,7 +14,7 @@ void vga_putchar(char ch, coord cursor) {
   VGA_BUFFER[cursor.y * VGA_WIDTH + cursor.x] = vga_entry(ch, vga_color(15, 0));
 }
 
-extern "C" void kmain(void) {
+extern "C" void _start(void) {
   static coord cursor = {40, 10};
   vga_putchar('X', cursor);
   while (1) {

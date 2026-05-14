@@ -1,19 +1,22 @@
 CC      = clang++
 CFLAGS  = --target=i386-elf -ffreestanding -fno-builtin \
           -fno-exceptions -fno-rtti -fno-stack-protector \
-					-fno-pic -fno-pie -nostdlib -m32 -Wall -Wextra
+          -fno-pic -fno-pie -nostdlib -m32 -Wall -Wextra
+
+BOOT    = ../common/boot.asm
+LDFILE  = ../common/linker.ld
 
 AS      = nasm
 ASFLAGS = -f elf32
 
 LD      = ld
-LDFLAGS = -m elf_i386 -T linker.ld
+LDFLAGS = -m elf_i386 -T $(LDFILE)
 
 OBJ     = boot.o kernel.o
 
 all: kernel.elf
 
-%.o: %.asm
+boot.o: $(BOOT)
 	$(AS) $(ASFLAGS) $< -o $@
 
 %.o: %.cpp
