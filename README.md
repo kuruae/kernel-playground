@@ -1,9 +1,9 @@
 # kernel playground
-Repo in which i experiment with different languages to help me choose a language for 42 Paris KFS projects.
+Repo in which i experiment with different languages to help me choose a language for 42 Paris KFS projects. (and because i'm interested in all of these languages)
 
 [C++](./docs/cpp.md) as a C-style kernel with restricted C++ subsets
  
-[ZIG](./docs/zig.md), the new C?
+[Zig](./docs/zig.md) the new C
  
 [Rust](./docs/rust.md) because i like crabs
 
@@ -32,7 +32,7 @@ make run-iso  # needs some dependencies
 **Rust:**
 - rustup
 
-**zig**
+**Zig**
 - N/A 
 
 **For emulation (run-iso):**
@@ -47,7 +47,7 @@ BIOS -> bootloader -> os -> libc/runtime -> main()
 but instead we're going to do baremetal/freestanding programming so you can remove the runtime, the os, and subtitute the bootloader by grub
 so next time we get pointer arithmetic wrong the whole system crashes :)
 
-**asm bootstrap**
+### asm bootstrap
 that's our entry point
 
 it basically does this:
@@ -56,7 +56,7 @@ it basically does this:
 - call the kernel entry function
 - halt forever if the kernel returns
 
-# linker script
+### linker script
 The linker is what decides:
 - where sections go in memory
 - where the entrypoint is
@@ -67,7 +67,7 @@ around 1MB for x86 kernels (2MB advised for 64bits)
 
 Without the linker script the compiler would produce a normal userspace executable layout
 
-# Kernel source
+### kernel source
 
 This is where we write real code in our language of choice
 
@@ -83,4 +83,5 @@ Each cell is:
 
 So we can print on the screen by directly interacting with the hardwares memory
 
+## Misc
 ![boot](./docs/boot.png)
