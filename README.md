@@ -1,14 +1,13 @@
 # kernel playground
 Repo in which i experiment with different languages to help me choose a language for 42 Paris KFS projects. (and because i'm interested in all of these languages)
 
-[C++](./docs/cpp.md) as a C-style kernel with restricted C++ subsets
- 
+[C++](./docs/cpp.md) written as a C-style kernel using a restricted C++ subset 
 [Zig](./docs/zig.md) the new C
  
 [Rust](./docs/rust.md) because i like crabs
 
 
-## Usage  
+## usage  
 
 Simply cd into the language of your choice and run the makefile
 
@@ -37,18 +36,16 @@ make run-iso  # needs some dependencies
 
 **For emulation (run-iso):**
 - qemu
-- xoriso (libisoburn)
+- xorriso (libisoburn)
 - mtools
 
-## Explanations
-A normal userspace program usually looks like this:
+## explanations
+A normal userspace program boots like:  
+``BIOS → bootloader → OS → libc/runtime → main()``. Here we strip out the runtime and OS, and swap the bootloader for GRUB  
+so when we get pointer arithmetic wrong, the whole system crashes :)
 
-BIOS -> bootloader -> os -> libc/runtime -> main()
-but instead we're going to do baremetal/freestanding programming so you can remove the runtime, the os, and subtitute the bootloader by grub
-so next time we get pointer arithmetic wrong the whole system crashes :)
-
-### asm bootstrap
-that's our entry point
+### ASM bootstrap
+That's our entry point
 
 it basically does this:
 - define multiboot header for GRUB
@@ -63,7 +60,7 @@ The linker is what decides:
 - how the final ELF is laid out
 
 The linker script also defines where the kernel is loaded,
-around 1MB for x86 kernels (2MB advised for 64bits)
+around 1MB for x86 kernels (he conventional load address for x86 is 0x100000 (1MB), and for x86_64 you'd often see 0x200000 (2MB))
 
 Without the linker script the compiler would produce a normal userspace executable layout
 
@@ -83,5 +80,5 @@ Each cell is:
 
 So we can print on the screen by directly interacting with the hardwares memory
 
-## Misc
+## misc
 ![boot](./docs/boot.png)
