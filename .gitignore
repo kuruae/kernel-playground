@@ -3,4 +3,5 @@
 *.elf
 *target/
 *zig-cache/
+*zig-out/
 iso/
