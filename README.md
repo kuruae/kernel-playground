@@ -1,9 +1,8 @@
 # kernel playground
 Repo in which i experiment with different languages to help me choose a language for 42 Paris KFS projects. (and because i'm interested in all of these languages)
 
-[C++](./docs/cpp.md) written as a C-style kernel using a restricted C++ subset 
-[Zig](./docs/zig.md) the new C
- 
+[C++](./docs/cpp.md) written as a C-style kernel using a restricted C++ subset   
+[Zig](./docs/zig.md) the new C    
 [Rust](./docs/rust.md) because i like crabs
 
 
@@ -60,7 +59,8 @@ The linker is what decides:
 - how the final ELF is laid out
 
 The linker script also defines where the kernel is loaded,
-around 1MB for x86 kernels (he conventional load address for x86 is 0x100000 (1MB), and for x86_64 you'd often see 0x200000 (2MB))
+around 1MB for x86 kernels   
+(he conventional load address for x86 is 0x100000 (1MB), and for x86_64 you'd often see 0x200000 (2MB))
 
 Without the linker script the compiler would produce a normal userspace executable layout
 
