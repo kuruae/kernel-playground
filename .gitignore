@@ -2,4 +2,5 @@
 *.iso
 *.elf
 *target/
+*zig-cache/
 iso/
