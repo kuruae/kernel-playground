@@ -33,7 +33,7 @@ make run-iso  # needs some dependencies
 - rustup
 
 **Zig**
-- N/A 
+- Zig (yes)
 
 **For emulation (run-iso):**
 - qemu
