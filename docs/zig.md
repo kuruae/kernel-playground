@@ -1,4 +1,5 @@
 # Zig 
+[source](../zig/src/main.zig)
 
 Zig felt much closer to C than Rust for kernel, at least for simple low level work:
 - direct memory manipulation

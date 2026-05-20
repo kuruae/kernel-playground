@@ -1,4 +1,5 @@
 # rust
+[source](../rust/src/main.rs)
 
 This one is going to be a bit more documented as i am learning the language itself
 

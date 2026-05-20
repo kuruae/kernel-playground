@@ -1,4 +1,5 @@
 # C++
+[source](../cpp/kernel.cpp)
 
 This one is the reference code that i wrote first before trying Rust and Zig, so i don't have much to develop here except the choice of C++ instead of C 
 
