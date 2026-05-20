@@ -1,5 +1,5 @@
-   0.061988834s  INFO prepare_target{force=false package_id=rust v0.1.0 (/home/enzo/projects/kernel-playground/rust) target="rust"}: cargo::core::compiler::fingerprint: fingerprint error for rust v0.1.0 (/home/enzo/projects/kernel-playground/rust)/Check { test: false }/TargetInner { name: "rust", tested: false, benched: false, doc: true, ..: with_path("/home/enzo/projects/kernel-playground/rust/src/main.rs", Edition2024) }
-   0.062004375s  INFO prepare_target{force=false package_id=rust v0.1.0 (/home/enzo/projects/kernel-playground/rust) target="rust"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/enzo/projects/kernel-playground/rust/target/i686-unknown-linux-gnu/debug/.fingerprint/rust-f23d038d1e7209a0/bin-rust`
+   0.085692755s  INFO prepare_target{force=false package_id=rust v0.1.0 (/home/enzo/projects/kernel-playground/rust) target="rust"}: cargo::core::compiler::fingerprint: fingerprint error for rust v0.1.0 (/home/enzo/projects/kernel-playground/rust)/Check { test: false }/TargetInner { name: "rust", tested: false, benched: false, doc: true, ..: with_path("/home/enzo/projects/kernel-playground/rust/src/main.rs", Edition2024) }
+   0.085772125s  INFO prepare_target{force=false package_id=rust v0.1.0 (/home/enzo/projects/kernel-playground/rust) target="rust"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/enzo/projects/kernel-playground/rust/target/i686-unknown-linux-gnu/debug/.fingerprint/rust-f23d038d1e7209a0/bin-rust`
 
 Caused by:
     No such file or directory (os error 2)
